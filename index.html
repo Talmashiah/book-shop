@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Shop</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body onload="init()">
+    <h1 class="headline">BOOK SHOP</h1>
+    <div class="read-book-modal" hidden>
+        
+    </div>
+
+    <div class="add-book-modal" hidden>
+        <input type="text" class="add-name" placeholder="name">
+        <input type="number" class="add-price" placeholder="price">
+        <input type="text" class="add-img" placeholder="copy image address">
+        <div><button onclick="onAddBook()" class="add-btn">Add</button></div>
+    </div>
+    <div class="books-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th colspan="3">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="books-table"></tbody>
+        </table>
+        <button class="add-btn" onclick="onReadAndAddNewBook()">Add book</button>
+    </div>
+
+    <script src="js\book-utils.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js\book-controller.js"></script>
+    <script src="js\book-service.js"></script>
+</body>
+
+</html>
